@@ -1,28 +1,22 @@
 # Car Manual Context-Aware Chatbot (RAG)
 
-A Retrieval-Augmented Generation (RAG) system that answers car maintenance questions using an MG ZS SUV manual. Built with LangChain and OpenAI.
+A Standard project for Retrieval-Augmented Generation (RAG) system that answers car maintenance related questions, using an `MG ZS SUV` manual. Built with LangChain and OpenAI.
 
 ## RAG (Retrieval-Augmented Generation)
 
-Combines:
-
-- **Retrieval**: Fetch relevant info from documents
-- **Generation**: Use LLMs to craft natural responses  
-Enables factual, context-aware answers grounded in source material.
+Recent technic that combines **Retrieval** to Fetch relevant info from documents, and **Generation** by leveraging LLMs to craft natural responses. It enables factual, context-aware answers grounded in source material.
 
 ## LangChain
 
-Framework for LLM applications. Used here for:
-
-- Document loading (`UnstructuredHTMLLoader`)
-- Text splitting (`HTMLTableRowSplitter`)
-- Vector storage (`Chroma`)
-- Pipeline orchestration (`RunnablePassthrough` chain)
+A recent python framework to build context aware chat LLM applications. It is useful to build reasoning pipeline for better context relevant answers from the LLM step-by-step. including:
+1. Document loading (ex. `UnstructuredHTMLLoader`)
+2. Text splitting (ex. `HTMLTableRowSplitter`)
+3. Vector storage (ex. `Chroma`)
+4. Pipeline orchestration (ex. `RunnablePassthrough` chain)
 
 ## Project Goal
 
-Create a voice-ready assistant that interprets car warning lights by:
-
+Create a chat assistant that interprets car warning lights by:
 1. Extracting manual content
 2. Enabling natural language queries
 3. Providing actionable repair guidance
@@ -50,13 +44,6 @@ response = chain.invoke(query)
 
 **Output:**  
 "Consult an MG Authorised Repairer as soon as possible."
-
-## Requirements
-
-- Python 3.10
-- OpenAI API key
-- Packages:  
-  `langchain-core`, `langchain-openai`, `chromadb`, `beautifulsoup4`
 
 ## Quick Start
 
